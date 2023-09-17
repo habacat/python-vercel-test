@@ -21,4 +21,4 @@ def hello_world():
 
 @app.route('/api')
 def run_slove():
-	return solve()
+	return solve("test1.csv")
