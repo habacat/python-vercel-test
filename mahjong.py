@@ -38,7 +38,7 @@ def RepeatOnce(df, cards, pf, pfw, i, name, player_names, winner_names, winner_s
 			return False, False, False
 
 def solve(data_json):
-	df = pd.read_json(data_json, encoding='utf-8', skiprows=1) # type(data) --> <class 'pandas.core.frame.DataFrame'>
+	df = pd.read_json(data_json, encoding='utf-8') # type(data) --> <class 'pandas.core.frame.DataFrame'>
 
 	p1_name, p2_name, p3_name, p4_name = df.columns # 获得4个玩家的名字
 	pn = player_names = np.array([p1_name, p2_name, p3_name, p4_name]) # 将四个名字存储在player_names中，方便取用

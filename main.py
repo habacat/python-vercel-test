@@ -51,6 +51,7 @@ def run_slove():
 			}
 			return jsonify(data)
 
-	if request.method == 'POST':
+	if request.method == 'GET':
 		return '请使用POST方法，向 https://python-vercel-test-one.vercel.app/api 传递data(json格式)\n \
-			data需要为使用df.to_json(orient=\'records\')将dataframe转换为json。'
+			data需要为使用df.to_json(orient=\'records\')将dataframe转换为json。\n \
+				具体方法为：df = pd.read_csv("test1.csv", encoding=\'utf-8\', skiprows=1)\n'
