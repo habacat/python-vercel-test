@@ -22,10 +22,10 @@ def hello_world():
 @app.route('/api')
 def run_slove():
 	# 读取CSV文件
-	test()
+	# test()
 	# df = pd.read_csv("test1.csv", encoding='utf-8', skiprows=1)
 	# # 将DataFrame转换为JSON字符串
 	# json_data = df.to_json(orient="records")
 	# # 打印JSON数据
 	# return jsonify(json_data)
-	# index()
+	index()
