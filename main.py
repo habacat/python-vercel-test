@@ -24,8 +24,8 @@ def run_slove():
     list1,list2,list3 = solve("test1.csv")
       # 创建一个包含三个列表的字典
     data = {
-        'array1': list1,
-        'array2': list2,
-        'array3': list3
+        'array1': list1.tolist(),
+        'array2': list2.tolist(),
+        'array3': list3.tolist()
     }
     return jsonify(data)
