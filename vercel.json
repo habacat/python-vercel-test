@@ -2,14 +2,14 @@
 	"version": 2,
 	"builds": [
 		{
-			"src": "app.py",
+			"src": "date.py",
 			"use": "@now/python"
 		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "app.py"
+			"dest": "date.py"
 		}
 	]
 }
