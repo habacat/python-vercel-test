@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 # from mahjong import solve, hello_world2
 import pandas as pd
+import numpy as np
+# from check import CheckWin
+from test import test
 
 app = Flask(__name__)
 
@@ -16,13 +19,10 @@ if __name__ == '__main__':
 def hello_world():
     return 'Hello from Flask Github!'
 
-# @app.route('/api')
-# def run_slove():
-#     solve("test1.py")
-    
-@app.route('/hello2')
+@app.route('/api')
 def run_slove():
 	# 读取CSV文件
+	test()
 	df = pd.read_csv("test1.csv", encoding='utf-8', skiprows=1)
 	# 将DataFrame转换为JSON字符串
 	json_data = df.to_json(orient="records")
