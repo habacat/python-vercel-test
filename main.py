@@ -19,6 +19,6 @@ def hello_world():
 def run_slove():
     solve("test1.py")
     
-@app.route('/api')
+@app.route('/hello2')
 def run_slove():
     hello_world2()
