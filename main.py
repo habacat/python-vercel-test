@@ -21,4 +21,11 @@ def hello_world():
 
 @app.route('/api')
 def run_slove():
-	return solve("test1.csv")
+    list1,list2,list3 = solve("test1.csv")
+      # 创建一个包含三个列表的字典
+    data = {
+        'array1': list1,
+        'array2': list2,
+        'array3': list3
+    }
+    return jsonify(data)
