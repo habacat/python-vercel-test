@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from mahjong import solve
 
 app = Flask(__name__)
 
@@ -13,3 +14,7 @@ if __name__ == '__main__':
 @app.route('/hello')
 def hello_world():
     return 'Hello from Flask Github!'
+
+@app.route('/api')
+def run_slove():
+	solve("test1.py")
