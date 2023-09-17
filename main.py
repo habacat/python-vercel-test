@@ -15,9 +15,9 @@ if __name__ == '__main__':
 def hello_world():
     return 'Hello from Flask Github!'
 
-@app.route('/api')
-def run_slove():
-    solve("test1.py")
+# @app.route('/api')
+# def run_slove():
+#     solve("test1.py")
     
 @app.route('/hello2')
 def run_slove():
