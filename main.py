@@ -25,7 +25,7 @@ def run_slove():
 		data = request.form.get('data')  # 获取名为"data"的POST参数
 		winner_names, player_names, winner_scores = solve(data)
 		fin = np.empty((0,))
-		if(not (winner_names and player_names and winner_scores == False)):
+		if(not (winner_names.all() and player_names.all() and winner_scores.all() == False)):
 			if(np.all(winner_scores) == 0):
 				fin = np.append(fin, 'Draw')
 				for name, score in zip(player_names, winner_scores): # 遍历player_names数组和winner_scores列表
@@ -52,6 +52,7 @@ def run_slove():
 			return jsonify(data)
 
 	if request.method == 'GET':
-		return '请使用POST方法，向 https://python-vercel-test-one.vercel.app/api 传递data(json格式)\n \
-			data需要为使用df.to_json(orient=\'records\')将dataframe转换为json。\n \
-				具体方法为：df = pd.read_csv("test1.csv", encoding=\'utf-8\', skiprows=1)\n'
+		return '''请使用POST方法，向 https://python-vercel-test-one.vercel.app/api 传递data(json格式)
+		data需要为使用df.to_json(orient='records')将dataframe转换为json。
+		具体方法为：df = pd.read_csv("test1.csv", encoding='utf-8', skiprows=1)
+		'''
