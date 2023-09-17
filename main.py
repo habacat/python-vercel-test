@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from mahjong import solve, hello_world2
+# from mahjong import solve, hello_world2
 
 app = Flask(__name__)
 
@@ -21,4 +21,5 @@ def hello_world():
     
 @app.route('/hello2')
 def run_slove():
-    hello_world2()
+    print("test111")
+    return 'test222'
