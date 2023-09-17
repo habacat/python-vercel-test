@@ -114,7 +114,7 @@ def solve(filename):
 					return pn, winner_names, winner_scores
 
 
-def hello_world():
+def hello_world2():
     return '仅支持post请求...'
 
 
