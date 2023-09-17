@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 # from mahjong import solve, hello_world2
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -21,5 +22,9 @@ def hello_world():
     
 @app.route('/hello2')
 def run_slove():
-    print("test111")
-    return 'test222'
+	# 读取CSV文件
+	df = pd.read_csv("test1.csv", encoding='utf-8', skiprows=1)
+	# 将DataFrame转换为JSON字符串
+	json_data = df.to_json(orient="records")
+	# 打印JSON数据
+	return jsonify(json_data)
